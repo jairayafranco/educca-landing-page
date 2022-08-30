@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection
+  title="Nos apasiona diseñar soluciones educativas para personas y empresas"
+  id="intro"
+>
+  <!-- <Icon slot="eyebrow" name="logomark" class="h-32" /> -->
+  <Fragment slot="lead">
+    Somos un equipo multidisciplinario presto a atender la demanda empresarial
+    de habilidades y capacidades. Contamos con un sistema multiplataforma, que
+    nos permite la colaboración exitosa de profesionales, para ofrecer contenido
+    educativo sincrónico y asincrónico de manera flexible.
+
+    <!-- Astro is a new kind
+    of site builder for the
+    <span class="text-primary">modern</span> web.
+    <span class="text-primary">Lightning-fast</span>
+    performance meets <span class="text-primary">powerful</span> developer experience. -->
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-4">
+    <a
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="person" class="h-8" />
+      <span>Plataforma de cursos virtuales LMS</span>
+    </a>
+    <a
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="book" class="h-8" />
+      <span>Experiencia de aprendizaje LXP</span>
+    </a>
+    <a
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="whatsapp" class="h-8" />
+      <span>Cápsulas educativas vía Whatsapp</span>
+    </a>
+    <a
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="radio" class="h-8" />
+      <span>Audiencia en PodCast #HazmeSaber</span>
+    </a>
+  </div>
+</ContentSection>
+
+<style>
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    cursor: cursor;
+  }
+</style>
