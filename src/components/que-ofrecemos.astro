@@ -1,0 +1,81 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "APRENDE A TU RITMO",
+    description:
+      "Realiza tus cursos desde tu casa. Sin horarios y a tu propio ritmo.",
+    icon: "uil:clipboard-notes",
+  },
+  {
+    title: "FÁCIL ACCESO",
+    description:
+      " Página web disponible en dispositivos móviles para que realices tus cursos.",
+    icon: "mdi:cloud-sync",
+  },
+  {
+    title: "INSTRUCTORES EXPERTOS",
+    description:
+      "Cada instructor comparte sus conocimientos y experiencias contigo en cada lección.",
+    icon: "bi:people-fill",
+  },
+  {
+    title: "CERTIFICADO",
+    description:
+      "Al terminar tu curso, recibirás un certificado de finalización con tu nombre y detalles del curso.",
+    icon: "fa-solid:id-card",
+  },
+];
+---
+
+<ContentSection title="¿Qué ofrecemos?" id="features">
+  <!-- <Fragment slot="lead">
+    Astro comes <span class="text-primary">batteries included</span>. It takes
+    the best parts of
+    <span class="text-primary">state-of-the-art</span>
+    tools and adds its own <span class="text-primary">innovations</span>.
+  </Fragment> -->
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
+          <div class="w-16 h-16 p-3 border-2 border-current rounded-full colors">
+            <Icon name={icon} />
+          </div>
+          <p class="text-l font-extrabold text-center">{title}</p>
+          <p class="text-sm text-center text-offset">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
+
+<script>
+  const borders = document.querySelectorAll(".colors");
+  const colors = [
+    "border-red-700",
+    "border-green-700",
+    "border-yellow-700",
+    "border-orange-700",
+  ];
+  borders.forEach((border, index) => {
+    border.classList.add(colors[index]);
+  });
+</script>
+
+<style lang="css">
+  [astro-icon="uil:clipboard-notes"] {
+    color: rgb(185 28 28 / var(--tw-border-opacity));
+  }
+  [astro-icon="mdi:cloud-sync"] {
+    color: rgb(21 128 61 / var(--tw-border-opacity));
+  }
+  [astro-icon="bi:people-fill"] {
+    color: rgb(161 98 7 / var(--tw-border-opacity));
+  }
+  [astro-icon="fa-solid:id-card"] {
+    color: rgb(194 65 12 / var(--tw-border-opacity));
+  }
+</style>
