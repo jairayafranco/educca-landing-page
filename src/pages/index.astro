@@ -7,6 +7,8 @@ import Intro from "~/components/intro.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import StepsLeft from "~/components/steps-left.astro";
+import IntroSecond from "~/components/intro-second.astro";
+import Instructor from "~/components/instructor.astro";
 import "~/styles/index.css";
 
 const { site } = Astro;
@@ -87,6 +89,8 @@ const description =
     <div class="px-8 py-32 space-y-24">
       <Intro />
       <StepsLeft />
+      <IntroSecond />
+      <Instructor />
       <Features />
       <Compatibility />
       <Showcase />
