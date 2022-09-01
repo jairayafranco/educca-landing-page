@@ -64,10 +64,12 @@ const description =
       if (themeSaved) {
         document.documentElement.dataset.theme = themeSaved;
       } else {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+        const prefersLight = window.matchMedia(
+          "(prefers-color-scheme: light)"
         ).matches;
-        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+        document.documentElement.dataset.theme = prefersLight
+          ? "light"
+          : "dark";
       }
 
       window
